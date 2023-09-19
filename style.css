@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom right,rgb(214, 221, 250),rgb(37, 65, 89),rgb(95, 116, 122));
+    
+}
+
+.spinner {
+    height: 68px;
+    width: 68px;
+    border: 4px solid;
+    border-radius: 50px;
+    border-color: rgb(217, 178, 241) transparent rgb(222, 196, 244) transparent; 
+    animation: spin  1.3s ease infinite;
+    background-image: url(./spin.png);
+    background-size: contain;
+}
+h2{
+    position: relative;
+    top: 70px;
+    left: -88px;
+    color: rgb(167, 219, 249);
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    
+}
+@keyframes spin{
+    to{
+        transform:rotate(360deg)
+    }
+}
+@media  (max-width: 480px) {
+    body{
+        display: flex;
+    }
+   .spinner{
+    position:absolute;
+   }
+   h2{
+    position:relative;
+    left: 5px;
+   }
+
+    
+}
